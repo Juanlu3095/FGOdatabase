@@ -1,0 +1,221 @@
+<h2 class="titulo-pag">Servant</h2>
+<!--COMIENZO DEL BUCLE FOR CON NGFOR-->
+<div *ngFor="let item of servant">
+    <!--IMAGEN SERVANT-->
+    <span class="img-container">
+        <img src="{{ item.imagen }}">
+    </span>
+
+    <!--NOMBRE CLASE Y RAREZA-->
+
+    <p class="nombre-servant">{{item.nombre}}</p>
+    <div class="row align-items-center m-auto justify-content-center">
+        <div class="col-12 d-flex justify-content-center">
+            <!--ICONO DE LA CLASE-->
+            <img *ngIf="item.clase=='Shielder'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayShieldericon.png?itok=dCfX-2dF">
+            <img *ngIf="item.clase=='Saber'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GraySabericon.png?itok=0EI07tNY">
+            <img *ngIf="item.clase=='Archer'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayArchericon.png?itok=5fyN9D3d">
+            <img *ngIf="item.clase=='Lancer'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayLancericon.png?itok=Ls-5Tyi5">
+            <img *ngIf="item.clase=='Rider'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayRidericon.png?itok=IgzPTCbm">
+            <img *ngIf="item.clase=='Caster'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayCastericon.png?itok=scXal-e1">
+            <img *ngIf="item.clase=='Assasin'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayAssassinicon.png?itok=yvw9dS_w">
+            <img *ngIf="item.clase=='Berserker'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayBerserkericon.png?itok=SSlJidMj">
+            <img *ngIf="item.clase=='Ruler'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayRulericon.png?itok=KpjO5eT2">
+            <img *ngIf="item.clase=='Avenger'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayAvengericon.png?itok=AvQKFYbT">
+            <img *ngIf="item.clase=='Moon Cancer'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayMooncancericon.png?itok=BgBbP0Io">
+            <img *ngIf="item.clase=='Alter Ego'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayAlteregoicon.png?itok=ZUbIcv7E">
+            <img *ngIf="item.clase=='Foreigner'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayForeignericon.png?itok=WXJVQuuM">
+            <img *ngIf="item.clase=='Pretender'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2021-08/Pretender_Silver_1.png?itok=QLP2WA2U">
+            <img *ngIf="item.clase=='Beast'" class="icono-clase" src="https://gamepress.gg/grandorder/sites/grandorder/files/2023-04/class_Beast_0.png">
+            &nbsp;
+            <span class="d-flex align-items-center">{{item.clase}} {{item.rareza}}⭐</span>
+        </div>    
+    </div>
+
+    <!--STATS-->
+    <h5 class="titulo-dato">Estadísticas</h5>
+    <hr class="linea">
+
+        <!--TABLA VIDA Y ATQ-->
+        <TABLE class="tabla">
+            <TR><TH>Vida Máx</TH>
+                <TD>{{item.vida_max}}</TD> <TD class="td-bold">Atq Máx</TD> <TD>{{item.atq_max}}</TD></TR>
+            <TR><TH>Vida NV.100</TH>
+                <TD>{{item.vida_max_100}}</TD> <TD class="td-bold">Atq Nv.100</TD> <TD>{{item.atq_max_100}}</TD></TR>
+            <TR><TH>Vida Nv.120</TH>
+                <TD>{{item.vida_max_120}}</TD> <TD class="td-bold">Atq Nv.120</TD> <TD>{{item.atq_max_120}}</TD></TR>
+        </TABLE>
+        <p class="nota">*Los Fou no están incluidos</p>
+
+        <!--TABLA CARTAS-->
+        <div class="cartas row">
+            <div class="col-4"><b>Nº golpes:</b></div>
+            <div class="col-2"><img src="https://gamepress.gg/sites/grandorder/files/inline-images/quick.png">{{item.golpes_quick}}</div>
+            <div class="col-2"><img src="https://gamepress.gg/sites/grandorder/files/inline-images/arts.png">{{item.golpes_arts}}</div>
+            <div class="col-2"><img src="https://gamepress.gg/sites/grandorder/files/inline-images/buster.png">{{item.golpes_buster}}</div>
+            <div class="col-2"><img src="https://gamepress.gg/sites/grandorder/files/inline-images/extra.png">{{item.golpes_extra}}</div>
+        </div>
+        <p class="deck"><b>Deck cartas:</b> {{item.cartas}}</p>
+
+        <!--Estrellas, NP Gain y death ratio-->
+        <div class="datos-np-star-death">
+            <p>
+                <img class="icono-np-star" src="https://gamepress.gg/sites/grandorder/files/2019-02/Npchargeup.png"><b>Generación NP por golpe:</b> {{item.gen_np_atq}}%
+            </p>
+            <p>
+                <img class="icono-np-star" src="https://gamepress.gg/sites/grandorder/files/2019-02/Npchargeup.png"><b>Generación NP al ser golpeado:</b> {{item.gen_np_def}}%
+            </p>
+            <p>
+                <img class="icono-np-star" src="https://gamepress.gg/grandorder/sites/grandorder/files/2019-05/StarAbsorptionUp.png"><b>Absorción estrellas:</b> {{item.abs_estrellas}}
+            </p>
+            <p>
+                <img class="icono-np-star" src="https://gamepress.gg/sites/grandorder/files/2019-05/Stargainup_0.png"><b>Generación de estrellas por golpe:</b> {{item.gen_estrellas}}%
+            </p>
+            <p>
+                <img class="icono-np-star" src="https://gamepress.gg/grandorder/sites/grandorder/files/2019-03/Death.png"><b>Ratio de muerte:</b> {{item.death_rate}}%
+            </p>
+        </div>
+
+    <!--OTROS DATOS-->
+    <h5 class="titulo-dato">Otros Datos</h5>
+    <hr class="linea">
+
+        <div class="otros-datos">
+            <p>
+                <b>Género:</b> {{item.genero}}
+            </p>
+            <p>
+                <b>Atributo:</b> {{item.atributo}}
+            </p>
+            <p>
+                <b>Alineación:</b> {{item.alineacion}}
+            </p>
+            <p>
+                <b>Tratos:</b> {{item.trato}}
+            </p>
+        </div>
+
+    <!--ETIQUETAS-->
+    <!--SELECT * FROM servant WHERE etiquetas LIKE '%def%';-->
+    <h5 class="titulo-dato">Etiquetas <a href="#">(Ver etiquetas)</a></h5>
+    <hr class="linea">
+
+        <p class="etiquetas">
+            {{item.etiquetas}}
+        </p>
+
+    <!--HABILIDADES-->
+    <h5 class="titulo-dato">Habilidades</h5>
+    <hr class="linea">
+
+        <div class="habilidades">
+            <p>
+                <b>{{item.skill_1}}</b> <br>
+                {{item.skill_1_desc}}
+            </p>
+            <p>
+                <b>{{item.skill_2}}</b> <br>
+                {{item.skill_2_desc}}
+            </p>
+            <p>
+                <b>{{item.skill_3}}</b> <br>
+                {{item.skill_3_desc}}
+            </p>  
+        </div>
+
+    <!--HABILIDADES A AGREGAR-->
+    <h5 class="titulo-dato">Habilidades a agregar</h5>
+    <hr class="linea">
+
+        <div class="habilidades-agregar">
+            <p>
+                <b>Extra Attack Boost</b> <br>
+                Aumenta Ataque de la carta EXTRA (30-50%).
+            </p>
+            <p>
+                <b>Load Magical Energy</b> <br>
+                Comienza la batalla con la barra de Np cargada (10-20%).
+            </p>
+            <p>
+                <b>{{item.append_skill_3}}</b> <br>
+                {{item.append_skill_desc_3}}
+            </p>  
+        </div>
+
+    <!--PASIVAS-->
+    <!--PARA LAS PASIVAS SE USA [ngStyle] para comprobar que exista la pasiva, si existe display:block, si no, display:none-->
+    <h5 class="titulo-dato">Pasivas</h5>
+    <hr class="linea">
+
+    <div class="pasivas">
+        <p [ngStyle]="{'display':item.pasiva1 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva1}}</b> <br>
+            {{item.pasiva1_desc}}
+        </p>
+        <p [ngStyle]="{'display':item.pasiva2 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva2}}</b> <br>
+            {{item.pasiva2_desc}}
+        </p>
+        <p [ngStyle]="{'display':item.pasiva3 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva3}}</b> <br>
+            {{item.pasiva3_desc}}
+        </p>
+        <p [ngStyle]="{'display':item.pasiva4 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva4}}</b> <br>
+            {{item.pasiva4_desc}}
+        </p>    
+        <p [ngStyle]="{'display':item.pasiva5 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva5}}</b> <br>
+            {{item.pasiva5_desc}}
+        </p>  
+        <p [ngStyle]="{'display':item.pasiva6 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva6}}</b> <br>
+            {{item.pasiva6_desc}}
+        </p>  
+        <p [ngStyle]="{'display':item.pasiva7 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva7}}</b> <br>
+            {{item.pasiva7_desc}}
+        </p>  
+        <p [ngStyle]="{'display':item.pasiva8 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva8}}</b> <br>
+            {{item.pasiva8_desc}}
+        </p>  
+        <p [ngStyle]="{'display':item.pasiva9 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva9}}</b> <br>
+            {{item.pasiva9_desc}}
+        </p>  
+        <p [ngStyle]="{'display':item.pasiva10 == '' ? 'none' : 'block'}">
+            <b>{{item.pasiva10}}</b> <br>
+            {{item.pasiva10_desc}}
+        </p>  
+    </div>
+
+    <!--FANTASMA NOBLE-->
+    <h5 class="titulo-dato">Fantasma Noble</h5>
+    <hr class="linea">
+
+    <div class="fantasma-noble">
+        <p>
+            <b>{{item.np}}</b> <br>
+            {{item.np_desc}}
+        </p>  
+    </div>
+
+    <!--ESENCIA DE BOND-->
+    <h5 class="titulo-dato">Esencia de Bond</h5>
+    <hr class="linea">
+    
+    <div class="esencia-bond">
+        <p>
+            <img src="{{item.esencia_bond_imagen}}"> &nbsp;
+            <b>{{item.esencia_bond}}</b> <br><br>
+            {{item.esencia_bond_desc}}
+        </p>  
+    </div>
+</div>
+<!--FIN DEL CICLO FOR CON NGFOR-->
+
+<!--BOTÓN PARA VOLVER AL INICIO-->
+<div class="btn-home">
+    <button class="btn btn-primary" (click)="volverInicio()">Volver</button>
+</div>

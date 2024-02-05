@@ -1,0 +1,115 @@
+
+<div class="container">
+  
+  <!--LISTA SERVANTS-->
+  <p class="titulo border">Lista de Servants</p>
+  <!--FILTRO POR CLASE / CAROUSEL-->
+  <div class="clase">
+    <p class="filtro-titulo text-center">Filtro por clase</p>
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item saber active" data-bs-interval="5000" [routerLink]="['/clase', 'saber']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GraySabericon.png?itok=0EI07tNY" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item archer" data-bs-interval="5000" [routerLink]="['/clase', 'archer']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayArchericon.png?itok=5fyN9D3d" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item lancer" data-bs-interval="5000" [routerLink]="['/clase', 'lancer']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayLancericon.png?itok=Ls-5Tyi5" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item rider" data-bs-interval="5000" [routerLink]="['/clase', 'rider']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayRidericon.png?itok=IgzPTCbm" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item caster" data-bs-interval="5000" [routerLink]="['/clase', 'caster']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayCastericon.png?itok=scXal-e1" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item assasin" data-bs-interval="5000" [routerLink]="['/clase', 'assasin']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayAssassinicon.png?itok=yvw9dS_w" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item berserker" data-bs-interval="5000" [routerLink]="['/clase', 'berserker']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayBerserkericon.png?itok=SSlJidMj" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item shielder" data-bs-interval="5000" [routerLink]="['/clase', 'shielder']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayShieldericon.png?itok=dCfX-2dF" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item ruler" data-bs-interval="5000" [routerLink]="['/clase', 'ruler']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayRulericon.png?itok=KpjO5eT2" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item avenger" data-bs-interval="5000" [routerLink]="['/clase', 'avenger']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayAvengericon.png?itok=AvQKFYbT" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item alter-ego" data-bs-interval="5000" [routerLink]="['/clase', 'alter ego']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayAlteregoicon.png?itok=ZUbIcv7E" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item moon-cancer" data-bs-interval="5000" [routerLink]="['/clase', 'moon cancer']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayMooncancericon.png?itok=BgBbP0Io" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item foreigner" data-bs-interval="5000" [routerLink]="['/clase', 'foreigner']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2019-05/GrayForeignericon.png?itok=WXJVQuuM" class="d-block w-40 icono-clase" alt="...">
+        </div>
+        <div class="carousel-item pretender" data-bs-interval="5000" [routerLink]="['/clase', 'pretender']">
+          <img src="https://gamepress.gg/grandorder/sites/grandorder/files/styles/thumbnail/public/2021-08/Pretender_Silver_1.png?itok=QLP2WA2U" class="d-block w-40 icono-clase" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <!--FILTRO POR RAREZA-->
+  <div class="rareza">
+    <p class="filtro-titulo text-center">Filtro por rareza</p>
+      <div class="row align-items-center m-auto justify-content-center">
+        <div class="col-2 border border-warning" [routerLink]="['/rareza', 5]">5⭐</div>
+        <div class="col-2 border border-warning" [routerLink]="['/rareza', 4]">4⭐</div>
+        <div class="col-2 border" [routerLink]="['/rareza', 3]">3⭐</div>
+        <div class="col-2 border border-bronze" [routerLink]="['/rareza', 2]">2⭐</div>
+        <div class="col-2 border border-bronze" [routerLink]="['/rareza', 1]">1⭐</div>
+      </div>
+  </div>
+  <!--FILTRO POR BÚSQUEDA-->
+    <div class="row mt-5 search-tag">
+      <div class="col-md-5 mx-auto">
+        <p class="filtro-titulo text-center">Filtro por etiqueta</p>
+          <div class="input-group">
+              <input class="form-control border-end-0 border" [value]="busqueda" placeholder="Buscar" id="example-search-input" [(ngModel)]="busqueda" (keydown.enter)="buscar(busqueda)"> 
+              <span class="input-group-append">
+                  <button class="btn btn-outline-secondary bg-white border-start-0 border-bottom-0 border ms-n5" type="button" [routerLink]="['/etiquetas', busqueda]">
+                    <span>🔍</span>
+                  </button>
+              </span>
+          </div>
+      </div>
+    </div>
+  
+      
+    <!--TABLA DE DATOS DE SERVANTS CON LOS DATOS DE LA API-->
+    <cdk-virtual-scroll-viewport itemSize="150" class="viewport">
+    <table class="table tabla-servant mt-4">
+      <thead>
+        <tr>
+          <th scope="col">Nº</th>
+          <th scope="col">Clase</th>
+          <th scope="col">Icono</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Rareza</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *cdkVirtualFor="let item of servant">
+          <th scope="row">{{ item.num_entrada }}</th>
+          <td>{{ item.clase }}</td>
+          <td><img [routerLink]="['/dato', item.id]" src="{{ item.icon }}"></td>
+          <td><a class="text-decoration-none text-reset" [routerLink]="['/dato', item.id]">{{ item.nombre }}</a></td>
+          <td>{{ item.rareza }}⭐</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </cdk-virtual-scroll-viewport>
+</div>

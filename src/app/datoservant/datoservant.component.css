@@ -1,0 +1,150 @@
+/*P servant*/
+.titulo-pag, .nombre-servant{
+    text-align: center;
+    font-size: 20px;
+}
+
+/*ICONO DE LA CLASE*/
+.icono-clase{
+    width: 42px;
+}
+
+/*SPAN DE LA IMAGEN DEL SERVANT*/
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+.img-container img{
+    width: 75%;
+    margin-bottom: 10px;
+}
+
+/*TÍtulo de los datos: stats...*/
+.titulo-dato{
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+}
+
+/*LÍNEA DE SEPARACIÓN BAJO TÍTULO DATO*/
+.linea{
+    color: rgb(0, 0, 255);
+    border: 1px solid;
+    margin: 0 2rem 0 1rem;
+}
+
+/*TABLAS*/
+.tabla{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 1px solid;
+}
+
+.tabla td, .tabla th{
+    padding: 0.5rem;
+    border: 1px solid;
+}
+
+.td-bold{
+    font-weight: bold;
+    background-color: #ecebeb;
+}
+
+.tabla th{
+    background-color: #ecebeb;
+}
+
+.nota{
+    margin-left: 1rem;
+    margin-right: 1rem; 
+}
+
+/*CARTAS*/
+.cartas{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.deck{
+    margin-top: 1rem;
+    margin-left: 1.6rem;
+    margin-right: 1rem; 
+}
+
+/*NP GAIN, ESTRELLAS, DEATH RATE*/
+.icono-np-star{
+    width: 35px;
+}
+
+.datos-np-star-death{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*OTROS DATOS*/
+.otros-datos{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*ETIQUETAS*/
+.etiquetas{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*HABILIDADES*/
+.habilidades{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*HABILIDADES A AGREGAR*/
+.habilidades-agregar{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*PASIVAS*/
+.pasivas{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*FANTASMA NOBLE*/
+.fantasma-noble{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*ESENCIA DE BOND*/
+.esencia-bond{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/*Botón volver al inicio*/
+.btn-home{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/*TABLETA*/
+@media only screen and (min-width:768px) and (max-width:1024px){
+    .tabla{
+        width: -webkit-fill-available;
+    }
+}
